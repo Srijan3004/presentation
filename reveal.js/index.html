@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Resampling Techniques</title>
+        <title>Revisiting k-means: New Algorithms via Bayesian Nonparametrics </title>
 
         <meta name="description" content="SP2020">
-        <meta name="author" content="Srijan Chattopadhyay">
+        <meta name="author" content="Aytijhya Saha">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +30,7 @@
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
                     <h3 id="heading" style="color: white; text-align: center; margin-bottom: 0.8cm; font-size: 60px;">
 						<font color="#FFFF00">  
-							<b>Resampling Techniques</b> 
+							<b>Revisiting k-means: New Algorithms via Bayesian Nonparametrics</b> 
 						</font> 
                        
                 	</h3>
@@ -38,36 +38,88 @@
 					
                     <hr>
                     <div style="text-align: center; margin-top: 1.5cm;">
-                        Topic Presentation:
+                        A presentation by:
                         <br>
 					</div>
 					<div style="text-align: center; margin-top: 0.5cm;">
-                        <strong>Srijan Chattopadhyay</strong>
+                        <strong>Aytijhya Saha</strong>
                         <br>
                         B.Stat 3rd Year<br>
 						Indian Statistical Institute, Kolkata
                     </div>
 					<div style="text-align: center; margin-top: 0.8cm;">
-                        BS2126
+                        March 20, 2023
                         <br>
 					</div>
                 </section>
+
+                <section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;">
+                    <h3>
+						<font color="#FFFF00">  
+							Paper Description <br>  
+						</font> 
+                        
+                    </h3>
+                    
+                    <div>
+						<ul>
+							<li class="fragment">
+								Paper title: Revisiting k-means: New Algorithms via Bayesian Nonparametrics
+							</li>
+						</ul>
+					</div>
+
+					<div style="margin-top: 0.6cm;">
+						<ul>
+							<li class="fragment">
+								Authors: Brian Kulis (Department of CSE, Ohio State University, Columbus),
+                                 Michael I. Jordan (Departments of EECS and Statistics, University of California, Berkeley)
+							</li>
+						</ul>
+					</div>
+					<div style="margin-top: 0.6cm;">
+						<ul>
+							<li class="fragment">
+								Published at International Conference on Machine Learning (ICML), 2012
+							</li>
+						</ul>
+					</div>
+					<div style="margin-top: 0.6cm;">
+						<ul>
+							<li class="fragment">
+								Number of Citations: 441
+							</li>
+						</ul>
+					</div>
+					<hr>
+					
+				</section>
 
 			<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-auto-animate
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<h3>
 					<font color="#FFFF00">  
-						Need! <br>  
+						Introduction <br>  
 					</font> 
 				</h3>
 			    <section data-transition="fade-in slide-out">
-		    <h4>
-                        $\vec{X} = (X_1,X_2,\cdots,X_n) \hspace{0.2cm}\text{iid data}$
-                    </h4>
-                    <p>
-				Say, we want to estimate something from the distribution of the test statistic based on the current data...But we don't have any extra data left to make any comment about any distributional feature of the test statistic of the data...Well, what can we do is like a splitting of the data and get multiple observations of the test statistic. But...for that we want the actual data to be too large! That's not always possible to have...So we have to use the same data repeatedly just assuming that as if the data is the whole population.		
-                    </p>
+                    <h3>
+						Statistical Learning/ Machine Learning  
+                    </h3>
+					
+					<div>
+						<q>Machine Learning is a set of methods that can automatically detect patterns in data,
+						 and then use the uncovered patterns to 
+						predict future data, or to perform other kinds of decision-making under uncertainty.</q> 
+						<br>
+						- Kevin P. Murphy
+					</div>
+                    <center>
+						<img src="ml.png" height="300">
+					</center>
 			
+                </section>
+
 				<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;">
                     <h3>
                         What is cluster analysis?
