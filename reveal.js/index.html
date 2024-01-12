@@ -199,24 +199,19 @@
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<h4>
 					<font color="#FFFF00">  
-						Hard Clustering via Dirichlet Process <br>  
+						Bootstrap <br>  
 					</font> 
 				</h4>
 				   <section data-transition="fade-in slide-out">
 					<h4>
-					Gibbs Sampling
+					Method
 					</h4>
 					<div class="fragment">
-						One of the simplest algorithm for inference in a DP mixture is based on Gibbs sampling.
-						Gibbs sampling is a Markov chain Monte Carlo (MCMC) algorithm for obtaining a sequence of observations which are approximated from a specified multivariate probability distribution, when direct sampling is difficult.
-						Gibbs sampling consists of a random walk on an undirected graph
-						whose vertices, $V$ correspond to the values of $\boldsymbol{x} = (x_1, \cdots, x_d )$ and in which there is
-						an edge from $\boldsymbol{x}$ to $\boldsymbol{y}$ if $\boldsymbol{x}$ and $\boldsymbol{y}$ differ in only one coordinate. 
-						The steps of the algorithm are as follows:
+						
 					<div>
 						<ul>
 							<li class="fragment">
-								Choose an initial assignment.
+								Take samples of the length same as the observed sample by SRSWR from the observed sample.
 							</li>
 						</ul>
 					</div>
@@ -224,7 +219,7 @@
 					<div style="margin-top: 0.6cm;">
 						<ul>
 							<li class="fragment">
-								Fix an ordering of the variables (any order is fine).
+								Take B many samples and for each of those, calculate the test statistic.
 							</li>
 						</ul>
 					</div>
@@ -239,7 +234,7 @@
 					<div style="margin-top: 0.6cm;">
 						<ul>
 							<li class="fragment">
-								Set $t \xleftarrow{} t + 1$ and repeat from step 2.
+								So, we have B many observations from the distribution of the test statistic.
 							</li>
 						
 						</ul>
