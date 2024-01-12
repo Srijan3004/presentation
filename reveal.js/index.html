@@ -129,24 +129,23 @@
 		    </div>
 					
 				
-				    </section>
+		 </section>
 
-					<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
+		<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
 						<h3>
-						K-means objective function
+						Method
 						</h3>
 						
 						<div>
-						Note that, given a set of data points $\boldsymbol{x}_{1}, \ldots, \boldsymbol{x}_{n}$, the k-means algorithm attempts to find clusters $\ell_{1}, \ldots, \ell_{k}$ 
-						to minimize the following objective function:
-						$$
-						\min_{\left\{\ell_{c}\right\}_{c=1}^{k}} \sum_{c=1}^{k} \sum_{\boldsymbol{x} \in \ell_{c}}\|\boldsymbol{x}-\boldsymbol{\mu}_{c}\|_2^2
-						\text { , where }  \boldsymbol{\mu}_{c}=\dfrac{1}{\left|\ell_{c}\right|} \sum_{\boldsymbol{x} \in \ell_{c}} \boldsymbol{x} .
-						$$
+						Following is the -1 jackknife, i.e. removing 1 data point at a time..
+						$\vec{X}_{[i]} = (X_1,\cdots,X_{i-1},X_{i+1},\cdots,X_n)$
+						We calculate the statistic from each of these replicates 
+						\hat{\theta}_{[i]} = S_{n-1}(\vec{X}_{[i]}), \hspace{0.2cm} \text{where} \hspace{0.2cm} \hat{\theta} = S_n(\vec{X})
+							\hat{\theta}() = \frac{1}{n}\sum_{1}^{n}{\hat{\theta}_{[i]}}
 						</div>
 						
 				
-					</section>	
+	 </section>	
                 
 
 					<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
