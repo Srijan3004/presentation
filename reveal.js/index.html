@@ -235,55 +235,18 @@
 				    </section>
 				    <section data-transition="fade-in slide-out">
 						<h4>
-						DP Gibbs Sampler 
+						Method
 						</h4>
-						<div class="fragment">
-						 The algorithm for inference in a DP mixture model based on Gibbs sampling is as follows:
-
-						</div>
 
 						<div>
-							<ul>
-								<li class="fragment">
-									Let the state of the underlying Markov chain
-									consists of the set of all cluster indicators and the set of
-									all cluster means.
-								</li>
-							</ul>
-						</div>
-	
-						<div style="margin-top: 0.6cm;">
-							<ul>
-								<li class="fragment">
-									The algorithm proceeds by first looping
-									repeatedly through each of the data points and performing
-									Gibbs moves on the cluster indicators for each point.
-								</li>
-							</ul>
-						</div>
-						<div style="margin-top: 0.6cm;">
-							<ul>
-								<li class="fragment">
-									For $i=1, \ldots, n$, we reassign $\boldsymbol{x}_{i}$ to existing cluster $c$ with probability $\frac{n_{-i, c}}{Z} \cdot \phi\left(\boldsymbol{x}_{i} \mid \boldsymbol{\mu}_{c}, \sigma I\right)$, where $n_{-i, c}$ is the number of data points (excluding $\boldsymbol{x}_{i}$) that are assigned to cluster $c$. With probability
-									$
-									\frac{\alpha}{Z} \int \phi\left(\boldsymbol{x}_{i} \mid \boldsymbol{\mu}, \sigma I\right) d G_{0}(\boldsymbol{\mu})
-									$,
-									we start a new cluster. $Z$ is an appropriate normalizing constant here.
+						x_i ^ * \in \{x_1,\cdots,x_n\} \hspace{0.2cm} \text{for} \hspace{0.2cm} i = 1(1)n\\
 
-                                    If we end up choosing to start a new cluster, we select its mean from the posterior distribution obtained from the prior $G_{0}$ and the single sample $\boldsymbol{x}_{i}$. 
-								</li>
-							
-							</ul>
+\hat{\theta}^* = s(x_i ^ *)\\
+
+\hat{\theta_1}^*, \hat{\theta_2}^*, \cdots, \hat{\theta_B}^*\\
+							So, using these B values, we can estimate many things about the estimated value of the actual parameter based on the observed data.
 						</div>
-						<div style="margin-top: 0.6cm;">
-							<ul>
-								<li class="fragment">
-									Next, we perform Gibbs moves on the means: sample $\boldsymbol{\mu}_{c}$ from the posterior based on prior $G_0$ and all points currently assigned to cluster $c, \forall c$.
-								</li>
-							
-							</ul>
-						</div>
-						
+					    
 					</section>
 					<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
 							<h4>
