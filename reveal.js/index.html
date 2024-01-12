@@ -1,40 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Presentation</title>
 
-		<title>reveal.js</title>
+    <!-- Include reveal.js CSS -->
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <!-- Optional: Include your theme CSS -->
+    <link rel="stylesheet" href="reveal.js/css/theme/your-theme.css" id="theme">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Optional: Add a background video -->
+    <div id="background">
+        <video autoplay muted loop poster="video/poster.jpg" id="bgvid">
+            <source src="video/background.mp4" type="video/mp4">
+        </video>
+    </div>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Your slides go here -->
+            <section>
+                <h2>Slide 1</h2>
+                <p>Your content goes here.</p>
+            </section>
+            <section>
+                <h2>Slide 2</h2>
+                <p>More content...</p>
+            </section>
+        </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <!-- Include reveal.js JavaScript -->
+    <script src="reveal.js/js/reveal.js"></script>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <!-- Initialize reveal.js -->
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'slide',
+        });
+    </script>
+</body>
 </html>
