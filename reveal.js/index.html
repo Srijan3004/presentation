@@ -70,7 +70,17 @@
 					    
 					
 					<div>
-						Say, we want to estimate something from the distribution of the test statistic based on the current data...But we don't have any extra data left to make any comment about any distributional feature of the test statistic of the data...Well, what can we do is like a splitting of the data and get multiple observations of the test statistic. But...for that we want the actual data to be too large! That's not always possible to have...So we have to use the same data repeatedly just assuming that as if the data is the whole population.
+						Say, we want to estimate something from the 
+						distribution of the test statistic based on the 
+						current data...But we don't have any extra data 
+						left to make any comment about any distributional 
+						feature of the test statistic of the data...Well, 
+						what can we do is like a splitting of the data and 
+						get multiple observations of the test statistic. 
+						But...for that we want the actual data to be too large! 
+						That's not always possible to have...So we have to use 
+						the same data repeatedly just assuming that as if the 
+						data is the whole population.
 					</div>
                    
 			
@@ -78,19 +88,25 @@
 
 				<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;">
                     <h3>
-                        What is cluster analysis?</h3>
+                        Usefulness</h3>
 					<div>
 						
 					</div>
 					<div>
+						Say, we want to estimate some parameter of the actual population from the 
+						observed data. $\theta$ is the actual parameter. Say, we estimate it by $\hat{\theta} = S_n(\vec{x})$.
+						But, then the question is 
+						how good and how stable the estimate is. i.e., 
+						based on this data how far is the estimate from the actual. 
+						Also, if this is not too far based on this data, then is that due 
+						to the goodness of the estimate, i.e. if I take data from the same distribution 
+						and redo the same procedure, am I going to get something close to it or too far? 
+						For that, we have to get an idea about the bias and variance of the data. 
+						But with only one sample in hand, how on earth are we going to do that?
 
-                    Clustering is an unsupervised method for partitioning a collection of data
-                    points, into groups, such that the objects in a group will be similar (or related)
-				    to one another and different from (or unrelated to) the objects in other groups.
+                                                   <center>Thanks to Resampling!</center>
 					</div>
-                    <center>
-						<img src="clustering.gif" class="centerImage" height="320" width="500" >
-					 </center>
+                
 			
                 </section>
 
