@@ -131,7 +131,7 @@
 				
 		 </section>
 
-		<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
+		             <section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
 						<h3>
 						Method
 						</h3>
@@ -154,7 +154,7 @@
 						</div>
 						
 				
-	 </section>	
+	                      </section>	
 
 				<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
 						<h3>
@@ -175,7 +175,7 @@
 						</div>
 						
 				
-	 </section>	
+	                       </section>	
 
 				<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
 						<h3>
@@ -192,67 +192,7 @@
 						</div>
 						
 				
-	 </section>	
-                
-
-					<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
-						<h3>
-							Remarks
-						</h3>
-	
-					    <div  style="margin-top: 0.6cm;">
-						
-						<ul>
-						<li class="fragment" >	
-							K-means is straightforward
-							to implement and works well for a variety of applications.
-							But, a major drawback of this algorithm is that the value of k needs to be specified by the user, which is not known in prior.
-
-						</li>
-					    </ul>
-					    </div>
-
-					    <div style="margin-top: 0.6cm;">
-					    <ul>
-						<li class="fragment">	
-						Whereas, Bayesian nonparametric models, viz. the Dirichlet process mixture, result in infinite mixture models which do not
-						fix the number of clusters in the data upfront; these methods
-						continue to gain popularity in the statistical learning community. But, Bayesian models require sampling algorithms
-						or variational inference techniques which can be difficult to
-						implement and are often not scalable.
-					    </li>
-					    </ul>
-					</div>
-					</section>
-
-					<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
-						<h3>
-							Dirichlet process mixture model
-						</h3>
-						
-						<div class="fragment">
-							A Bayesian extension to the mixture model arises by first placing a Dirichlet prior,
-							$\operatorname{Dir}\left(k, \boldsymbol{\pi}_{0}\right)$, on the mixing coefficients,
-							for some $\boldsymbol{\pi}_{0}$. If we further assume that the covariances of the Gaussians
-							are fixed to $\sigma I$ and that the means are drawn from some prior distribution $G_{0}$,
-						    we obtain the following Bayesian model:
-
-						</div>
-						<div class="fragment">
-							$$
-							\begin{aligned}
-							\boldsymbol{\pi} & \sim \operatorname{Dir}\left(k, \boldsymbol{\pi}_{0}\right) \\
-							\boldsymbol{z}_{1}, \ldots, \boldsymbol{z}_{n} & \sim \operatorname{Discrete}(\boldsymbol{\pi}) \\
-							\boldsymbol{\mu}_{1}, \ldots, \boldsymbol{\mu}_{k} & \sim G_{0} \\
-							\boldsymbol{x}_{1}, \ldots, \boldsymbol{x}_{n} & \sim \mathscr{N}\left(\boldsymbol{\mu}_{\boldsymbol{z}_{i}}, \sigma I\right)
-							\end{aligned}
-							$$
-						</div>
-						<div class="fragment">
-							If we take $\boldsymbol{\pi}_{0}=(\alpha/k)\boldsymbol{1}$, the limit is the above model, as $k \to \infty$, is known as Dirichlet process mixture model.
-						</div>
-					
-					</section>
+	                           </section>
 				</section>
 
                 <section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 25px;" data-auto-animate
