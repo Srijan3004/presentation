@@ -290,62 +290,17 @@
 					<section data-transition="fade-in slide-out">
 						<h3>
 							<font color="#FFFF00">  
-								Algorithm 1 : DP-means <br>  
+								Comparison <br>  
 								</font> 
 							
 						</h3>
 						
 						<div class="fragment">
 							<font color="#FFFF01">  
-								Input :
+								$X_1,\cdots,X_n \sim N(5,1) \hspace{0.2cm} n = 30,\cdots,1000$
 							</font>
-							$\boldsymbol{x}_1, \cdots, \boldsymbol{x}_n$ : input data, $\lambda:$ cluster penalty parameter
+							
 						</div>
-						<div class="fragment">
-							<font color="#FFFF01">  
-								Output:
-							</font>
-							Clustering $\ell_1, \cdots, \ell_k$ and number of clusters $k$
-						</div>
-						<div class="fragment">
-							<ul>
-								<li class="fragment">
-									<font color="#FFFF01">  
-										Step 1.
-									</font> 
-									Initialize: $k=1, \ell_1=\left\{\boldsymbol{x}_1, \cdots, \boldsymbol{x}_n\right\}$ and $\boldsymbol{\mu}_1$ the global mean.
-								</li>
-								<li class="fragment">
-									<font color="#FFFF01">  
-										Step 2.
-									</font> 
-									Initialize: cluster indicators $z_i=1$ for all $i=1, \ldots, n$.
-								</li>
-								<li class="fragment">
-									<font color="#FFFF01">  
-										Step 3.
-									</font> 
-									Repeat until convergence:
-									<ol>
-										<li>
-											For each point $\boldsymbol{x}_i$, compute $d_{i c}=\|\boldsymbol{x}_i-\boldsymbol{\mu}_c\|^2$ for $c=1, \ldots, k$
-										</li>
-
-										<li>
-											If $\min _c d_{i c}>\lambda$, set $k=k+1, z_i=k$, and $\boldsymbol{\mu}_k=\boldsymbol{x}_i$.
-										 Otherwise, set $z_i=\operatorname{argmin}_c d_{i c}$.
-
-										</li>
-										<li>
-											Generate clusters $\ell_1, \ldots, \ell_k$ based on $z_1, \ldots, z_k: \ell_j=$ $\left\{\boldsymbol{x}_i \mid z_i=j\right\}$
-										</li>
-										<li>
-											For each cluster $\ell_j$, compute $\boldsymbol{\mu}_j=\frac{1}{\left|\ell_j\right|} \sum_{\boldsymbol{x} \in \ell_j} \boldsymbol{x}$.
-										</li>
-									</ol>
-
-								</li>
-							</div>
 							
 					</section>
 
