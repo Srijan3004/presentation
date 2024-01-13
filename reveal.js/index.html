@@ -259,34 +259,22 @@
 					</section>
 					<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
 							<h4>
-								DP Gibbs Sampler 
+								Estimates of Bias and Variance
 							</h4>
-							
 							<div>
-								Then, we have the following probabilities to be
-								used during Gibbs sampling:
-							</div>
-
-							<div style="margin-top: 0.6cm;">
-								<ul>
-									<li class="fragment">
-										The posterior probability
-										of point $i$ being assigned to cluster $c$,
-										$$\hat{\gamma}\left(z_{i c}\right)=\frac{n_{-i, c} \cdot \exp \left(-\frac{1}{2 \sigma}\|\boldsymbol{x}_{i}-\boldsymbol{\mu}_{c}\|^{2}\right)}{\exp \left(-\frac{\lambda}{2 \sigma}-\frac{\|\boldsymbol{x}_{i}\|^{2}}{2(\rho+\sigma)}\right)+\sum_{j=1}^{k} n_{-i, j} \cdot \exp \left(-\frac{1}{2 \sigma}\|\boldsymbol{x}_{i}-\boldsymbol{\mu}_{j}\|^{2}\right)}$$
-									</li>
-								
-								</ul>
-							</div>
-
-							<div style="margin-top: 0.6cm;">
-								<ul>
-									<li class="fragment">
-								     and the posterior probability of starting a new cluster
-                                     $$\hat{\gamma}\left(z_{i, n e w}\right)=\frac{\exp \left(-\frac{\lambda}{2 \sigma}-\frac{\|\boldsymbol{x}_{i}\|^{2}}{2(\rho+\sigma)}\right)}{\exp \left(-\frac{\lambda}{2 \sigma}-\frac{\|\boldsymbol{x}_{i}\|^{2}}{2(\rho+\sigma)}\right)+\sum_{j=1}^{k} n_{-i, j} \cdot \exp \left(-\frac{1}{2 \sigma}\|\boldsymbol{x}_{i}-\boldsymbol{\mu}_{j}\|^{2}\right)}.$$ 
-									</li>
-								
-								</ul>
-							</div>
+						Bootstrap estimate of bias is:
+							\begin{equation*}
+							\hat{Bias}_{Boot} = \hat{\theta^*} - \hat{\theta}
+							\end{equation*}
+						
+						And, Bootstrap estimate of Variance is:
+							\begin{equation*}
+							\hat{V}_{Jack}(\hat{\theta}) = \frac{1}{B}\sum_{i=1}^{B}(\hat{\theta_i}^* - \hat{\theta^*}^2)
+							\end{equation*}
+							
+						</div>
+							
+							
 						
 					</section>
 
