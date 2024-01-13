@@ -130,7 +130,6 @@
 					
 				
 		 </section>
-
 		             <section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-transition="fade-in slide-out">
 						<h3>
 						Method
@@ -250,8 +249,7 @@
 							So, using these B values, we can estimate many things about the estimated value of the actual parameter based on the observed data.
 						                \begin{equation*}
 								\hat{\theta^*} = \frac{1}{B}\sum_{i=1}^B{\hat{\theta_i}^*}
-								\end{equation*}
-							
+								\end{equation*}	
 						</div>
 					    
 					</section>
@@ -268,75 +266,84 @@
 						And, Bootstrap estimate of Variance is:
 							\begin{equation*}
 							\hat{V}_{Jack}(\hat{\theta}) = \frac{1}{B}\sum_{i=1}^{B}(\hat{\theta_i}^* - \hat{\theta^*}^2)
-							\end{equation*}
-
-								
+							\end{equation*}		
                                                  \begin{equation*}
 					         \frac{\hat{V}_{Jack}(\hat{\theta})}{V(\hat{\theta})} \overset{P}{\to} 1 \hspace{0.2cm} \text{Under Regularity Conditions}
 					         \end{equation*}
-						
-							
-						</div>
-							
-							
-						
+					</div>	
 					</section>
 		
-					</section>
+				</section>
+
+
+		    <section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 36px;" data-auto-animate
+				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+				<h4>
+					<font color="#FFFF00">  
+						Comparison <br>  
+					</font> 
+				</h4>
+				   <section data-transition="fade-in slide-out">
+					<h4>
+				        Simulation 1
+					</h4>
+					   <div class="fragment" style="border: 1px solid #000; padding: 10px;">
+						        <center>
+						            This is the first simulation:<br>
+						            <font color="#FFFF01">  
+						                $X_1,\cdots,X_n \sim N(5,1) \hspace{0.2cm} n = 30,\cdots,1000$
+						            </font>
+						        </center>
+					</div>
+				    </section>
+			            <section data-transition="fade-in slide-out">
+					<h4>
+				        Bias Comparison
+					</h4>
+					   <div>
+						<center>
+							<img src="comp1b.jpeg">	
+							</center>        
+					</div>
+				    </section>
+			    
+		
+				</section>
+
+		    
 
 				<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;" data-auto-animate
 						data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				
 					<section data-transition="fade-in slide-out">
-    <h3>
-        <font color="#FFFF00">  
-            Comparison <br>  
-        </font> 
-    </h3>
-    
-    <div class="fragment" style="border: 1px solid #000; padding: 10px;">
-        <center>
-            This is the first simulation:<br>
-            <font color="#FFFF01">  
-                $X_1,\cdots,X_n \sim N(5,1) \hspace{0.2cm} n = 30,\cdots,1000$
-            </font>
-        </center>
-    </div>
-</section>
+						     <h3>
+						        <font color="#FFFF00">  
+						            Comparison <br>  
+						        </font> 
+						    </h3>
+												
+						    
+						    <div class="fragment" style="border: 1px solid #000; padding: 10px;">
+						        <center>
+						            This is the first simulation:<br>
+						            <font color="#FFFF01">  
+						                $X_1,\cdots,X_n \sim N(5,1) \hspace{0.2cm} n = 30,\cdots,1000$
+						            </font>
+						        </center>
+						    </div>
+				       </section>
 
 					<section data-transition="fade-in slide-out">
 
 						<h3>
 							<font color="#FFFF00">  
-								Convergence of Objective function of DP means <br>  
+								Bias Comparison <br>  
 							</font> 
 							
 						</h3>
-							<div class="fragment">
-							
-								<font color="#FFFF00">  
-									Theorem: 
-								</font>  DP means algorithm  monotonically decreases the following objective until local convergence:
-								$$
-								\begin{array}{cc}
-								\min _{\left\{\ell_{c}\right\}_{c=1}^{k}} & \sum_{c=1}^{k} \sum_{\boldsymbol{x} \in \ell_{c}}\|\boldsymbol{x}-\boldsymbol{\mu}_{c}\|^{2}+\lambda k \\
-								\text { where } & \boldsymbol{\mu}_{c}=\frac{1}{\left|\ell_{c}\right|} \sum_{\boldsymbol{x} \in \ell_{c}} \boldsymbol{x} .
-								\end{array}
-								$$	
-							
-							</div>
-							<div class="fragment">
-							
-								<font color="#FFFF00">  
-									Proof:
-								</font>
-									The reassignment step in the algorithm results in a non-increasing objective since the distance between
-									 a point and its newly assigned cluster mean never increases; for distances greater than $\lambda$,
-									  we can generate a new cluster and pay a penalty of $\lambda$ while still decreasing the objective.
-									 Similarly, the mean update step results in a non-increasing objective since the mean is the best representative of a cluster in terms of the squared Euclidean distance.
-									  The fact that the algorithm will converge locally follows from the fact that the objective function cannot increase,
-									and that there are only a finite number of possible clusterings of the data.
-							</div>
+							<center>
+							<img src="comp1b.jpeg">	
+							</center>
 					</section>	
 				</section>
  
