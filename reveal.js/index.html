@@ -357,19 +357,24 @@
 				data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
 				<h4>
 					<font color="#FFFF00">  
-						Bootstrap <br>  
+						Applications <br>  
 					</font> 
 				</h4>
 				   <section data-transition="fade-in slide-out">
 					<h4>
-					Method
+					Different areas of application
 					</h4>
 					<div class="fragment">
 						
 					<div>
 						<ul>
 							<li class="fragment">
-								Take samples of the length same as the observed sample by SRSWR from the observed sample.
+								Sometimes, a very weird looking statistic occur even in most of the real life applications the actual distribution or even 
+								the asymptotic distribution may be quite hard to find out. 
+								Or, even if we find out, the convergence rate may be very slow 
+								(For example, $L_2$ type statistic). In those cases people take a data driven 
+								resampling type approach to get rid of the situation with a theoretical justification 
+								but by using a smart data driven technique as well
 							</li>
 						</ul>
 					</div>
@@ -377,14 +382,21 @@
 					<div style="margin-top: 0.6cm;">
 						<ul>
 							<li class="fragment">
-								Take B many samples and for each of those, calculate the test statistic.
+								For avoiding overfitting issues in modelling,
+								one uses a jackknife type resampling 
+								(usually known as cross validation by splitting into test and train data). 
 							</li>
 						</ul>
 					</div>
 					<div style="margin-top: 0.6cm;">
 						<ul>
 							<li class="fragment">
-								So, we have B many observations from the distribution of the test statistic.
+								In many sequential data, the whole data becomes only one sample. 
+								For example, any time series data is only one sample of the actual data 
+								dependency distribution structure. In many cases dealing with 
+								some function of the whole series, we have to rely on some kind 
+								of bootstrapping or jackknife type procedure to get moe samples without
+								distracting the data much.
 							</li>
 						
 						</ul>
