@@ -511,23 +511,41 @@
 
 				<section data-background="bg-2.jpeg" data-background-opacity=0.4 style="text-align: left; font-size: 26px;">
                     <h3>
-                        Usefulness</h3>
+                        Mathematical Definition</h3>
 					<div>
 						
 					</div>
 					<div>
-						Say, we want to estimate some parameter of the actual population from the 
-						observed data. $\theta$ is the actual parameter. Say, we estimate it by $\hat{\theta} = S_n(\vec{x})$.
-						But, then the question is 
-						how good and how stable the estimate is. i.e., 
-						based on this data how far is the estimate from the actual. 
-						Also, if this is not too far based on this data, then is that due 
-						to the goodness of the estimate, i.e. if I take data from the same distribution 
-						and redo the same procedure, am I going to get something close to it or too far? 
-						For that, we have to get an idea about the bias and variance of the data. 
-						But with only one sample in hand, how on earth are we going to do that?
+						Certainly! Here is the provided text in LaTeX format:
 
-                                                   <center>Thanks to Resampling!</center>
+```latex
+Consider a random vector 
+\((X_{1},X_{2},\dots ,X_{d})\). Suppose its marginals are continuous, i.e. the marginal CDFs 
+\(F_{i}(x)=\Pr[X_{i}\leq x]\) are continuous functions. By applying the probability integral transform to each component, the random vector
+\[
+(U_{1},U_{2},\dots ,U_{d})=\left(F_{1}(X_{1}),F_{2}(X_{2}),\dots ,F_{d}(X_{d})\right)
+\]
+has marginals that are uniformly distributed on the interval \([0, 1]\).
+
+The copula of 
+\((X_{1},X_{2},\dots ,X_{d})\) is defined as the joint cumulative distribution function of 
+\((U_{1},U_{2},\dots ,U_{d})\):
+\[
+C(u_{1},u_{2},\dots ,u_{d})=\Pr[U_{1}\leq u_{1},U_{2}\leq u_{2},\dots ,U_{d}\leq u_{d}].
+\]
+The copula \(C\) contains all information on the dependence structure between the components of 
+\((X_{1},X_{2},\dots ,X_{d})\) whereas the marginal cumulative distribution functions \(F_{i}\) contain all information on the marginal distributions of \(X_{i}\).
+
+The reverse of these steps can be used to generate pseudo-random samples from general classes of multivariate probability distributions. That is, given a procedure to generate a sample 
+\((U_{1},U_{2},\dots ,U_{d})\) from the copula function, the required sample can be constructed as
+\[
+(X_{1},X_{2},\dots ,X_{d})=\left(F_{1}^{-1}(U_{1}),F_{2}^{-1}(U_{2}),\dots ,F_{d}^{-1}(U_{d})\right).
+\]
+The generalized inverses \(F_{i}^{-1}\) are unproblematic almost surely, since the \(F_{i}\) were assumed to be continuous. Furthermore, the above formula for the copula function can be rewritten as:
+\[
+C(u_{1},u_{2},\dots ,u_{d})=\Pr[X_{1}\leq F_{1}^{-1}(u_{1}),X_{2}\leq F_{2}^{-1}(u_{2}),\dots ,X_{d}\leq F_{d}^{-1}(u_{d})].
+\]
+```
 					</div>
                 
 			
